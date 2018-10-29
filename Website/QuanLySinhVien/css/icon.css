@@ -1,0 +1,74 @@
+
+
+a {
+  color: #333333;
+}
+a:hover {
+  color: #de00a5;
+}
+
+
+.o-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #0f3848;
+  margin-top: 9px;
+  float: right;
+  border: solid 2px white;
+  border-right: none;
+}
+
+.o-icon--wink {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-radial-gradient(calc(50% + 9px) calc(50% - 8px), 4px, #ffffff, #ffffff 99%, rgba(0, 0, 0, 0) 100%);
+  background-image: radial-gradient(4px at calc(50% + 9px) calc(50% - 8px), #ffffff, #ffffff 99%, rgba(0, 0, 0, 0) 100%);
+}
+.o-icon--wink::before, .o-icon--wink::after {
+  content: '';
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  will-change: transform;
+}
+.o-icon--wink::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transform: translate(-9px, -8px) scaleY(1);
+          transform: translate(-9px, -8px) scaleY(1);
+}
+.o-icon--wink::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55%;
+  height: 55%;
+  border: 4px solid transparent;
+  border-bottom-color: white;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -70%) rotate(0);
+          transform: translate(-50%, -70%) rotate(0);
+  -webkit-transform-origin: 50% 60%;
+          transform-origin: 50% 60%;
+}
+
+.o-icon--wink:hover::before {
+  -webkit-transform: translate(-9px, -8px) scaleY(0.3);
+          transform: translate(-9px, -8px) scaleY(0.3);
+}
+.o-icon--wink:hover::after {
+  -webkit-transform: translate(-50%, -70%) rotate(16deg);
+          transform: translate(-50%, -70%) rotate(16deg);
+}

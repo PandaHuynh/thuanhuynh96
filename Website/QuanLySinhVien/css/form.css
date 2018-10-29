@@ -1,0 +1,54 @@
+
+/* basic stylings ------------------------------------------ */
+
+h2 		 
+{ 
+  margin-bottom:50px; 
+}
+
+
+.footer 	{ text-align:center; }
+.footer a  { color:#53B2C8; }
+
+/* form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+  margin-bottom: 20px; 
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  /*display:block;*/
+  width:100%;
+  border:none;
+  border-bottom:2px solid #757575;
+  background-color: #f6f6f6;
+  /*margin-bottom: 20px;*/
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+.label_form				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+/*input:focus ~ label, input:valid ~ label 		{
+*/
+input:focus ~ .label_form, input:valid ~ .label_form {  
+  top:-20px;
+  font-size:15px;
+  color:#0f3949;
+
+}
+
+

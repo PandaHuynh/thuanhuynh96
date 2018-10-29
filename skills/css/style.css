@@ -1,0 +1,34 @@
+
+
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 2;
+  
+  box-sizing: border-box;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#skills h2{
+	background-color: #e74c3c;   
+    padding: 10px;
+    color: white;
+    /* font-size: 32px; */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer{
+  padding: 1rem;
+  background-color: #512DA8;
+  color: #fff;
+}

@@ -1,0 +1,295 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #FAFAFA;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  padding: 24px 0;
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0 5%;
+}
+@media (max-width: 640px) {
+  .flex-container {
+    top: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.flex-container > .flex-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.33%;
+          flex: 0 1 33.33%;
+}
+@media (max-width: 640px) {
+  .flex-container > .flex-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    padding-bottom: 32px;
+  }
+  .flex-container > .flex-item:first-child {
+    padding-top: 32px;
+  }
+}
+
+.cutebox {
+  height: 320px;
+  width: 220px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  margin: auto;
+  -webkit-transition: box-shadow .2s ease, -webkit-transform .2s ease;
+  transition: box-shadow .2s ease, -webkit-transform .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, -webkit-transform .2s ease;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+@media (max-width: 960px) {
+  .cutebox {
+    height: 290.90909px;
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .cutebox {
+    height: 246.15385px;
+    width: 169.23077px;
+  }
+}
+@media (max-width: 640px) {
+  .cutebox {
+    width: 100%;
+  }
+}
+.cutebox:after {
+  content: "";
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: calc(100% - 96px);
+  line-height: 240px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  font-size: 48px;
+  outline-offset: -90px;
+  opacity: 0;
+  -webkit-transition: opacity .4s ease;
+  transition: opacity .4s ease;
+  will-change: opacity, transform;
+}
+@media (max-width: 960px) {
+  .cutebox:after {
+    line-height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .cutebox:after {
+    line-height: 160px;
+  }
+}
+.cutebox.purple {
+  color: #A35DB5;
+  box-shadow: 0 0 32px rgba(163, 93, 181, 0.2);
+}
+.cutebox.purple:after {
+  content: "👾";
+  letter-spacing: 2px;
+}
+.cutebox.pink {
+  color: #FF55A1;
+  box-shadow: 0 0 32px rgba(255, 85, 161, 0.2);
+}
+.cutebox.pink:after {
+  content: "🦄";
+  letter-spacing: 6px;
+}
+.cutebox.blue {
+  color: #00CCFE;
+  box-shadow: 0 0 32px rgba(0, 204, 254, 0.2);
+}
+.cutebox.blue:after {
+  content: "🐳";
+}
+.cutebox .cutebox-bg {
+  position: absolute;
+  background: currentColor;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.cutebox footer {
+  width: 100%;
+  height: 96px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 24px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.cutebox footer span {
+  display: inline-block;
+  width: 100%;
+  line-height: 1.4;
+  font-weight: bold;
+}
+.cutebox footer span.color-name {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.4px;
+}
+.cutebox footer span.color-value {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.4px;
+}
+.cutebox:hover {
+  -webkit-transform: scale(1.05) translateY(-5px) translateZ(0);
+          transform: scale(1.05) translateY(-5px) translateZ(0);
+}
+.cutebox:hover:after {
+  opacity: 1;
+  -webkit-animation: zoomout .2s ease;
+          animation: zoomout .2s ease;
+}
+.cutebox:hover.purple {
+  color: #A35DB5;
+  box-shadow: 0 0 48px rgba(163, 93, 181, 0.1);
+}
+.cutebox:hover.pink {
+  color: #FF55A1;
+  box-shadow: 0 0 48px rgba(255, 85, 161, 0.1);
+}
+.cutebox:hover.blue {
+  color: #00CCFE;
+  box-shadow: 0 0 48px rgba(0, 204, 254, 0.1);
+}
+.cutebox:hover footer span.color-value {
+  color: currentColor !important;
+}
+
+@-webkit-keyframes zoomout {
+  from {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoomout {
+  from {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
+a {
+    color: #333333;
+    
+    &:hover {
+        color: #de00a5;
+    }
+}
+
+.o-icon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #de00a5;
+}
+
+.o-icon--wink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(4px at calc(50% + 9px) calc(50% - 8px), white, white 99%, transparent 100%);
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        transition: transform 0.3s ease-out;
+        will-change: transform;
+    }
+    
+    &::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: white;
+        transform: translate(-9px, -8px) scaleY(1);
+    }
+    
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 55%;
+        height: 55%;
+        border: 4px solid transparent;
+        border-bottom-color: white;
+        border-radius: 50%;
+        transform: translate(-50%, -70%) rotate(0);
+        transform-origin: 50% 60%;
+    }
+}
+
+.o-icon--wink:hover {
+    &::before {
+        transform: translate(-9px, -8px) scaleY(0.3);
+    }
+    
+    &::after {
+        transform: translate(-50%, -70%) rotate(16deg);   
+    }
+}
+

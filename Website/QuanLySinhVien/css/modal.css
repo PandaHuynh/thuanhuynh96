@@ -1,0 +1,244 @@
+#notifications {
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  z-index: 9999;
+  top: 0;
+  margin-bottom: 22px;
+  margin-right: 15px;
+  max-width: auto;
+}
+
+.modal-primary {
+  border: 2px solid #483d3f;
+}
+.modal-primary .modal-content {
+  background: #393032;
+}
+.modal-primary .modal-header {
+  color: #fff;
+  background-color: #483d3f;
+  box-shadow: inset 0px -5px 10px #393032;
+}
+.modal-primary .modal-header button {
+  color: #fff;
+  text-shadow: none;
+  transition: all .3s ease-in-out;
+}
+.modal-primary .modal-header button:hover {
+  color: #393032;
+  text-shadow: none;
+}
+.modal-primary .modal-body span {
+  color: #483d3f;
+}
+
+.modal-info {
+  border: 2px solid #058ed9;
+}
+.modal-info .modal-content {
+  background: #0471ad;
+}
+.modal-info .modal-header {
+  color: #fff;
+  background-color: #058ed9;
+  box-shadow: inset 0px -5px 10px #0471ad;
+}
+.modal-info .modal-header button {
+  color: #fff;
+  text-shadow: none;
+  transition: all .3s ease-in-out;
+}
+.modal-info .modal-header button:hover {
+  color: #0471ad;
+  text-shadow: none;
+}
+.modal-info .modal-body span {
+  color: #058ed9;
+}
+
+.modal-success {
+  border: 2px solid #49a53b;
+}
+.modal-success .modal-content {
+  background: #3a842f;
+}
+.modal-success .modal-header {
+  color: #fff;
+  background-color: #49a53b;
+  box-shadow: inset 0px -5px 10px #3a842f;
+}
+.modal-success .modal-header button {
+  color: #fff;
+  text-shadow: none;
+  transition: all .3s ease-in-out;
+}
+.modal-success .modal-header button:hover {
+  color: #3a842f;
+  text-shadow: none;
+}
+.modal-success .modal-body span {
+  color: #49a53b;
+}
+
+.modal-warning {
+  border: 2px solid #d9461d;
+}
+.modal-warning .modal-content {
+  background: #ad3817;
+}
+.modal-warning .modal-header {
+  color: #fff;
+  background-color: #d9461d;
+  box-shadow: inset 0px -5px 10px #ad3817;
+}
+.modal-warning .modal-header button {
+  color: #fff;
+  text-shadow: none;
+  transition: all .3s ease-in-out;
+}
+.modal-warning .modal-header button:hover {
+  color: #ad3817;
+  text-shadow: none;
+}
+.modal-warning .modal-body span {
+  color: #d9461d;
+}
+
+.modal-danger {
+  border: 2px solid #8c0000;
+}
+.modal-danger .modal-content {
+  background: #700000;
+}
+.modal-danger .modal-header {
+  color: #fff;
+  background-color: #8c0000;
+  box-shadow: inset 0px -5px 10px #700000;
+}
+.modal-danger .modal-header button {
+  color: #fff;
+  text-shadow: none;
+  transition: all .3s ease-in-out;
+}
+.modal-danger .modal-header button:hover {
+  color: #700000;
+  text-shadow: none;
+}
+.modal-danger .modal-body span {
+  color: #8c0000;
+}
+
+.alert {
+  padding: 0;
+}
+
+.alert-primary {
+  box-shadow: 0px 3px 10px #393032;
+  background: #483d3f;
+  border: none;
+  color: #fff;
+}
+.alert-primary i {
+  background: #393032;
+  height: 100%;
+  padding: 20px;
+  margin-right: 5px;
+}
+.alert-primary a {
+  padding: 10px;
+  color: #fff;
+  margin-top: 3px;
+}
+.alert-primary a:hover {
+  text-shadow: none;
+  color: #393032;
+}
+
+.alert-info {
+  box-shadow: 0px 3px 10px #0471ad;
+  background: #058ed9;
+  border: none;
+  color: #fff;
+}
+.alert-info i {
+  background: #0471ad;
+  height: 100%;
+  padding: 20px;
+  margin-right: 5px;
+}
+.alert-info a {
+  padding: 10px;
+  color: #fff;
+  margin-top: 3px;
+}
+.alert-info a:hover {
+  text-shadow: none;
+  color: #0471ad;
+}
+
+.alert-success {
+  box-shadow: 0px 3px 10px #3a842f;
+  background: #49a53b;
+  border: none;
+  color: #fff;
+}
+.alert-success i {
+  background: #3a842f;
+  height: 100%;
+  padding: 20px;
+  margin-right: 5px;
+}
+.alert-success a {
+  padding: 10px;
+  color: #fff;
+  margin-top: 3px;
+}
+.alert-success a:hover {
+  text-shadow: none;
+  color: #3a842f;
+}
+
+.alert-warning {
+  box-shadow: 0px 3px 10px #ad3817;
+  background: #d9461d;
+  border: none;
+  color: #fff;
+}
+.alert-warning i {
+  background: #ad3817;
+  height: 100%;
+  padding: 20px;
+  margin-right: 5px;
+}
+.alert-warning a {
+  padding: 10px;
+  color: #fff;
+  margin-top: 3px;
+}
+.alert-warning a:hover {
+  text-shadow: none;
+  color: #ad3817;
+}
+
+.alert-danger {
+  box-shadow: 0px 3px 10px #700000;
+  background: #8c0000;
+  border: none;
+  color: #fff;
+}
+.alert-danger i {
+  background: #700000;
+  height: 100%;
+  padding: 20px;
+  margin-right: 5px;
+}
+.alert-danger a {
+  padding: 10px;
+  color: #fff;
+  margin-top: 3px;
+}
+.alert-danger a:hover {
+  text-shadow: none;
+  color: #700000;
+}
